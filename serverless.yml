@@ -1,0 +1,25 @@
+service: mastermnd-python-lab
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+        path: /hello
+        method: get
+  evenorodd:
+    handler: handler.evenorodd
+    events:
+     - http:
+        path: /evenorodd
+        method: get
+  squared:
+    handler: handler.squared
+    events:
+     - http:
+        path: /squared
+        method: get
